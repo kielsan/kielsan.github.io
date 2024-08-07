@@ -26,12 +26,8 @@ body {
   background-color: var(--base-color);
   color: var(--text-color);
 }
-<<<<<<< HEAD
-/* #theme-switch {
-=======
 /*
 #theme-switch {
->>>>>>> 6e0669e4aa7b792f02694aa3c7fa65459bdcae63
   height: 50px;
   width: 50px;
   padding: 0;
@@ -55,8 +51,4 @@ body {
 }
 .darkmode #theme-switch svg:last-child {
   display: block;
-<<<<<<< HEAD
 } */
-=======
-}*/
->>>>>>> 6e0669e4aa7b792f02694aa3c7fa65459bdcae63
