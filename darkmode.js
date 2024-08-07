@@ -3,11 +3,11 @@ const themeSwitch = document.getElementById("theme-switch");
 
 const darkMode = function () {
   let mode = {
-    enable: () => {
+    enable: function () {
       document.body.className.add("darkmode");
       localStorage.setItem("darkmode", "active");
     },
-    disable: () => {
+    disable: function () {
       document.body.classList.remove("darkmode");
       localStorage.setItem("darkmode", null);
     },
