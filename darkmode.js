@@ -2,7 +2,7 @@ let darkmode = localStorage.getItem("darkmode");
 const themeSwitch = document.getElementById("theme-switch");
 
 const enableDarkMode = () => {
-  document.body.className.add("darkmode");
+  document.body.classList.add("darkmode");
   localStorage.setItem("darkmode", "active");
 };
 
