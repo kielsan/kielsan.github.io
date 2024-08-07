@@ -26,7 +26,7 @@ body {
   background-color: var(--base-color);
   color: var(--text-color);
 }
-#theme-switch {
+/* #theme-switch {
   height: 50px;
   width: 50px;
   padding: 0;
@@ -50,4 +50,4 @@ body {
 }
 .darkmode #theme-switch svg:last-child {
   display: block;
-}
+} */
