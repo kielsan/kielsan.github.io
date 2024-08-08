@@ -1,30 +1,109 @@
 :root {
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   --base-color: white;
   --base-variant: #e8e9ed;
   --text-color: #111528;
   --secondary-text: #232738;
   --primary-color: #3a435d;
-  --aceent-color: #b62a2a;
+  --aceent-color-hg: #b62a2a;
+  --aceent-color: #ac1919;
 }
 .darkmode {
-  --base-color: #070b1d;
+  --base-color: #101014;
   --base-variant: #101425;
   --text-color: #ffffff;
   --secondary-text: #a4a5b8;
   --primary-color: #3a435d;
-  --aceent-color: #b62a2a;
+  --aceent-color-hg: #b62a2a;
+  --aceent-color: #921212;
 }
 * {
   margin: 0;
   padding: 0;
 }
-html {
+html,
+body {
+  min-height: 100svh;
+  height: 100svh;
   font-family: Poppins;
 }
 body {
-  min-height: 100vh;
   background-color: var(--base-color);
   color: var(--text-color);
+}
+hr {
+  height: 3px;
+  border: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+  border: none;
+}
+#app {
+  min-height: 100%;
+  height: 100%;
+}
+#top-container {
+  min-height: 35%;
+  height: 35%;
+  width: 100%;
+}
+#top-upper-container {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#top-bottom-container {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header-btn {
+  font-size: 2rem;
+  font-weight: 1000;
+  color: var(--text-color);
+}
+.header-btn:hover {
+  color: var(--aceent-color);
+}
+
+#bottom-container {
+  min-height: 65%;
+  height: 65%;
+  width: 100%;
+}
+.bottom-container-card {
+  margin: auto;
+  width: 50%;
+  border-radius: 5px;
+  border: 5px solid var(--primary-color);
+  text-align: justify;
+  font-size: 22px;
+  padding: 20px;
+}
+@media screen and (max-width: 390px) {
+  #download-btn {
+    height: 50px;
+    width: 175px;
+    font-size: 1.35rem;
+  }
 }
 /*
 #theme-switch {
