@@ -1,3 +1,4 @@
+/*Start of Base style for html page*/
 :root {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
@@ -12,29 +13,31 @@
   --aceent-color-hg: #b62a2a;
   --aceent-color: #ac1919;
 }
-.darkmode {
-  --base-color: #101014;
-  --base-variant: #101425;
-  --text-color: #ffffff;
-  --secondary-text: #a4a5b8;
-  --primary-color: #3a435d;
-  --aceent-color-hg: #b62a2a;
-  --aceent-color: #921212;
-}
+
 * {
   margin: 0;
   padding: 0;
+}
+html {
+  box-sizing: border-box;
 }
 html,
 body {
   min-height: 100svh;
   height: 100svh;
+  width: 100svw;
   font-family: Poppins;
 }
 body {
   background-color: var(--base-color);
   color: var(--text-color);
 }
+#app {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
 hr {
   height: 3px;
   border: 0;
@@ -49,85 +52,156 @@ button {
   outline: none;
   border: none;
 }
-#app {
-  min-height: 100%;
-  height: 100%;
+/*End of Base style for html page*/
+
+/*
+  Move this darkmode class to 'darkmode.css'
+  when switching to react
+*/
+.darkmode {
+  --base-color: #101014;
+  --base-variant: #101425;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #3a435d;
+  --aceent-color-hg: #b62a2a;
+  --aceent-color: #921212;
 }
+
+/*Start of Top Container*/
 #top-container {
-  min-height: 35%;
-  height: 35%;
+  min-height: 30%;
+  height: 30%;
   width: 100%;
 }
 #top-upper-container {
-  height: 75%;
+  height: 60%;
   width: 100%;
+  padding-top: 10px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 30px;
 }
 #top-bottom-container {
   height: 25%;
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.header-btn {
+#site-title {
+  font-size: 4rem;
+  font-weight: 50;
+  color: var(--text-color);
+}
+#site-brief-description {
+  font-size: 1.25rem;
+  font-weight: 1;
+  color: var(--text-color);
+}
+.header-text {
   font-size: 2rem;
   font-weight: 1000;
   color: var(--text-color);
 }
-.header-btn:hover {
-  color: var(--aceent-color);
-}
+/*End of Top Container*/
 
-#bottom-container {
-  min-height: 65%;
-  height: 65%;
+/*Start of featured game*/
+
+#featured-game-container {
+  min-height: 40%;
+  height: 40%;
   width: 100%;
-}
-.bottom-container-card {
-  margin: auto;
-  width: 50%;
-  border-radius: 5px;
-  border: 5px solid var(--primary-color);
-  text-align: justify;
-  font-size: 22px;
-  padding: 20px;
-}
-@media screen and (max-width: 390px) {
-  #download-btn {
-    height: 50px;
-    width: 175px;
-    font-size: 1.35rem;
-  }
-}
-/*
-#theme-switch {
-  height: 50px;
-  width: 50px;
-  padding: 0;
-  border-radius: 50%;
-  background-color: var(--base-variant);
+  margin: 20px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 20px;
-  right: 20px;
 }
-#theme-switch svg {
-  fill: var(--primary-color);
+#featured-game {
+  height: 100%;
+  width: 50%;
+  border-radius: 19px;
+  border: 2.5px solid var(--primary-color);
 }
-#theme-switch svg:last-child {
-  display: none;
+#featured-game img {
+  width: 100%;
 }
-.darkmode #theme-switch svg:first-child {
-  display: none;
+/*End of featured game*/
+
+/*Start of game collections*/
+#game-collections-grid {
+  max-width: 1400px;
+  width: 100%;
+  margin: 45px auto 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px 22px;
+  justify-content: center;
+  padding: 0px 25px;
+  font-size: 0px;
 }
-.darkmode #theme-switch svg:last-child {
+.bottom-container-card {
+  border-radius: 19px;
+  border: 2.5px solid var(--primary-color);
+  aspect-ratio: 391 / 145;
   display: block;
-} */
+  width: 100%;
+  min-width: 100%;
+}
+@media only screen and (max-width: 1580px) {
+  #game-collections-grid {
+    grid-gap: 15px 16px;
+    max-width: 1350px;
+  }
+}
+@media only screen and (max-width: 1520px) {
+  #game-collections-grid {
+    max-width: 1280px;
+  }
+}
+@media only screen and (max-width: 1520px) {
+  #game-collections-grid {
+    max-width: 1250px;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  #game-collections-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    grid-gap: 15px 18px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  #game-collections-grid {
+    max-width: 800px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  #game-collections-grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0px 50px 0px 10px;
+    grid-gap: 7px;
+  }
+}
+/*End of game collections*/
+
+/*
+476px min width for desktop
+only 1 ITEM per row
+padding of 8px left & right
+*/
+/*
+600px max of 1 ITEM per row,
+601px min for item for 2 ITEMS per row
+padding of 25px left & right
+*/
+
+/*
+1300px max of 2 ITEMS per row
+1301px min for 3 ITEMS per row
+padding of 25px left & right
+*/
