@@ -75,7 +75,7 @@ button {
   width: 100%;
 }
 #top-upper-container {
-  height: 60%;
+  height: 100%;
   width: 100%;
   padding-top: 10px;
   display: flex;
@@ -84,13 +84,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-#top-bottom-container {
-  height: 25%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 #site-title {
   font-size: 4rem;
   font-weight: 50;
